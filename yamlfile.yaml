@@ -1,0 +1,148 @@
+# This line define the username
+name: Houssem
+
+age: 30
+Salary: 5000.250
+user_name: Houssemeddinechaouch
+is_active: True
+employment_date: 2026-01-01
+direct_manager: Ayoub
+
+
+serial_number: "0050"
+regex: "[a-zA-Z]+"
+
+message: "Hello\nHoussem" # Hello
+                          # Houssem
+
+s_message: 'Hello\nHoussem' # Hello\nHoussem
+
+path: 'C:\Users\Username\Documents\Report.docx' #C:\Users\Username\Documents\Report.docx
+quote: "It's YAML" #It's YAML 
+s_quote: 'It''s YAML'  #It's YAML -> escape by adding ' before 's -> ''s
+
+# Use | to preserve line breaks in a multi-line string.
+# Purpose: Improve readability and maintain the original formatting for developers.
+multi_line: |
+  Hello
+  Houssem
+  How are you?
+
+# Output:
+# Hello
+# Houssem
+# How are you?
+
+# Use > to fold multiple lines into a single string.
+# Purpose: Improve readability while treating the content as a single line.
+folded_message: >
+  Hello
+  Houssem
+  How are you?
+
+# Output:
+# Hello Houssem How are you?
+ 
+# Map (Object)
+# Purpose: Store related key-value pairs describing a single employee.
+employee:
+  name: Houssem Eddine Chaouch
+  age: 12
+  contact:
+    email: houssem@example.com
+
+# Output:
+# employee = {
+#   name: "Houssem Eddine Chaouch",
+#   age: 12,
+#   contact: {
+#     email: "houssem@example.com"
+#   }
+# }
+
+
+# List of Maps (Array of Objects)
+# Purpose: Store multiple employees, each represented by a map.
+# Use - to define each item in the list.
+employees:
+  - name: Houssem Eddine Chaouch
+    age: 12
+    contact:
+      email: houssem@example.com
+
+  - name: Ahmed Ben Ali
+    age: 25
+    contact:
+      email: ahmed@example.com
+
+  - name: Ayoub Chaouch
+    age: 22
+    contact:
+      email: ayoub@example.com
+
+# Output:
+# employees = [
+#   { name: "Houssem Eddine Chaouch", age: 12, contact: { email: "houssem@example.com" } },
+#   { name: "Ahmed Ben Ali", age: 25, contact: { email: "ahmed@example.com" } },
+#   { name: "Ayoub Chaouch", age: 22, contact: { email: "ayoub@example.com" } }
+# ]
+
+
+# Map
+# Purpose: Define configuration for different deployment environments.
+
+environments:
+  # Development: Used by developers to build and test new features.
+  development:
+    name: Development
+    url: https://dev.example.com
+    debug: true
+    database: dev_db
+
+  # Staging: Used to test the application before releasing it to production.
+  staging:
+    name: Staging
+    url: https://staging.example.com
+    debug: true
+    database: staging_db
+
+  # Production: The live environment accessible to real users.
+  production:
+    name: Production
+    url: https://example.com
+    debug: false
+    database: production_db
+
+# Output (Conceptual):
+# environments = {
+#   development: { name: "Development", debug: true, ... },
+#   staging: { name: "Staging", debug: true, ... },
+#   production: { name: "Production", debug: false, ... }
+# }
+
+
+# List of Maps
+# Purpose: Define multiple servers using a list (-), each with a hostname and IP address.
+
+servers:
+  # Development server
+  - environment: development
+    host: dev.example.com
+    ip: 192.168.1.10
+
+  # Staging server
+  - environment: staging
+    host: staging.example.com
+    ip: 192.168.1.20
+
+  # Production server
+  - environment: production
+    host: example.com
+    ip: 203.0.113.10
+
+# Output (Conceptual):
+# servers = [
+#   { environment: "development", host: "dev.example.com", ip: "192.168.1.10" },
+#   { environment: "staging", host: "staging.example.com", ip: "192.168.1.20" },
+#   { environment: "production", host: "example.com", ip: "203.0.113.10" }
+# ]
