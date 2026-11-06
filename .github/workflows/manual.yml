@@ -2,6 +2,15 @@ name: manual-workflow
 
 on:
   workflow_dispatch: 
+    inputs:
+      enviroment:
+        description: "Choose environment"
+        required: true
+        default: "staging"
+        type: choice
+        options:
+          - staging
+          - profuction
 
 jobs:
   deploy:
