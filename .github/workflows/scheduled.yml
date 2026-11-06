@@ -2,7 +2,7 @@ name: scheduled-workflow
 
 on:
   schedule:
-    - cron: "2 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   daily-task:
