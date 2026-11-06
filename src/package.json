@@ -2,9 +2,9 @@
   "name": "my-node-app",
   "version": "1.0.0",
   "description": "A simple Node.js app",
-  "main": "src/app.js",
+  "main": "app.js",
   "scripts": {
-    "test": " bash src/test.sh"
+    "test": "bash test.sh"
   },
   "dependencies": {}
 }
