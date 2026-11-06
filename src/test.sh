@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-echo "Running app.js tests..."
+echo "Running app.js tests...."
 
 node -e '
 const assert = require("node:assert");
